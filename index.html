@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹인텔리전스 중간과제</title>
+    <style>
+        /* 중간 과제 제출안내
+        연습문제 제출 내용이 그 당시 수업시간에 배운 것에 한하여 응용
+        하는 경우가 많음. Html + Css(css는 배운데까지)로 통일하여
+        중간고사 이전까지 배운 내용을 총망라하여 적용해볼 것.
+        콘텐츠의 내용은 학교생활을 중심으로 전개하는 것이 분량 확보에
+        도움이 됨 (예. 수강신청, 성적, 기숙사 생활, 통학 수단, 가계부, 수업 현황, 자기계발 등)
+        기한: 10.30 24:00까지
+        */
+
+        .bluetext {
+            color:rgb(95, 168, 201);
+        }
+
+        #container {
+            background:rgb(33, 163, 65);
+            width: 100%;
+            height: 20px;
+        }
+
+        h2 {
+            text-shadow: 5px 5px 3px;
+            color:rgb(148, 187, 76);
+            font-size: 2em;
+            letter-spacing: 0.1em;  
+        }
+
+        h3 {
+            color:rgb(228, 135, 135);
+        }
+
+        h5 {
+            color:rgb(199, 172, 85);
+        }
+
+        .knu {
+            font-family: 'Nanum Myeongjo', serif;
+            border:7px solid gray;
+            padding:6px;
+            width: 120px;
+            color: rgb(0, 165, 0);
+        }
+
+        .saying {
+            text-transform: capitalize;
+            font-variant: small-caps;
+            font-style: italic;
+        }
+
+        .undl {text-decoration: underline;}
+        .bold {font-weight: bold;}
+        .small {font-size: 1ex;}
+        .nanum {
+            font-family: 'Nanum Myeongjo', serif;
+            color:rgb(160, 149, 46);
+        }
+        .big {font-size: 3em;}
+    </style>
+</head>
+<body>
+    <h2 class="title">👩 국립공주대학생의 하루 👩</h2>
+    <br>
+    <fieldset>
+        <legend><b>www.kongju.ac.kr</b></legend>
+        <h4 class="knu">국립공주대학교</h4>
+        <img src="images/공주대로고.jfif" alt="국립공주대학교 로고"
+        width="150" height="150">
+        <form action="http://localhost/eunjae.php" method="post">
+            <label> 학번: <input type="text" name="usr" autofocus> </label> <br>
+            <label> 비밀번호: <input type="password" name="pwd"> </label> <br>
+            <input type="submit" value="인증하기">
+        </form>
+    </fieldset>
+    <br><br><br>
+
+    <h4>👤 회원 정보 👤</h4><br>
+
+    <label>나의 재학 기간<span class="small">(2021.03~)</span>🎓</label>
+    <progress value="40" max="100"></progress>
+    <br>
+    <label>내가 생각하는 나의 프로그래밍 능력치👩‍💻</label>
+    <meter value="0.3"></meter>
+    <br>
+    <p span class="nanum">↑ 게이지가 다 찰 수 있도록 재학 중 노력하기!! ↑</span></p>
+    <br>
+
+    <fieldset>
+        <legend>개인정보 수정</legend>
+        <p>
+            <label for="yourname">이름</label>
+            <input type="text" id="yourname" value="유은재">
+        </p>
+        <p>
+            <label for="gender">성별</label><br>
+            <label> <input type="radio" name="gender" value="male">남</label><br>
+            <label> <input type="radio" name="gender" value="female" checked>여</label>
+        </p>
+        <p>
+            <label for="socNo">주민등록번호</label>
+            <input type="text" id="socNo" placeholder="'-' 없이 숫자만 입력">
+        </p>
+        <p>
+            <label for="phone">전화번호</label>
+            <input type="text" id="phone" value="010-4500-0006">
+        </p>
+        <input type="submit" value="수정하기">
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>소속 단과대</legend>
+        <label for="college">대학</label>
+        <select id="college">
+            <optgroup label="천안캠퍼스">
+                <option value="engineering">천안공과대학</option>
+            </optgroup>
+            <optgroup label="신관캠퍼스">
+                <option value="education">사범대학</option>
+                <option value="humansociety">인문사회과학대학</option>
+                <option value="naturalSc">자연과학대학</option>
+                <option value="nursinghealth">간호보건대학</option>
+                <option value="art">예술대학</option>
+            </optgroup>
+            <optgroup label="예산캠퍼스">
+                <option value="agriculture">산업과학대학</option>
+            </optgroup>
+        </select>
+        <input type="submit" value="수정하기">
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>프로그래밍 언어 능력</legend>
+        <p>이 중 가능한 프로그래밍 언어를 선택하세요.💻 (중복선택가능)</p>
+        <label><input type="checkbox" name="proglang" value="C" checked>C/C++</label>
+        <label><input type="checkbox" name="proglang" value="JAVA">자바</label>
+        <label><input type="checkbox" name="proglang" value="Python" checked>파이썬</label>
+        <input type="submit" value="수정하기">
+    </fieldset>
+    <br><br>
+
+    <h4> · · · 커 뮤 니 티 · · · </h4>
+    <h4>📒오늘의 하루 기록📒</h4>
+
+    <p>
+        <h3>▶ 오늘 나의 등교 방법은?🚶</h3>
+        <label> <input type="radio" name="transport" value="schoolshuttlebus"><span class="bold">본가</span>에서 학교 셔틀버스로 등교 </label><br>
+        <label> <input type="radio" name="transport" value="intercitybus"><span class="bold">본가</span>에서 시외버스로 등교 </label><br>
+        <label> <input type="radio" name="transport" value="walkingfrtdorm"><span class="bold">기숙사</span>에서 걸어서 등교 </label><br>
+        <label> <input type="radio" name="transport" value="walkingfrtdorm"><span class="bold">기숙사</span>에서 킥보드를 타고 등교 </label>
+    </p>
+
+    <br>
+    
+    <p>
+        <h3>▶ 오늘 입은 상의의 색상은 무엇인가요?👕</h3>
+        (* 색상박스를 누른 뒤 선택해주세요)<br>
+        <label>오늘의 상의 색상: <input type="color"></label>
+    </p>
+
+    <br>
+
+    <p>
+        <h3>▶ 오늘 <span class="undl">아침</span>식사 유무🥣</h3>
+        <label> <input type="radio" name="breakfast" value="havebreakfast">아침을 먹었다. </label><br>
+        <label> <input type="radio" name="breakfast" value="donthavebreakfast">아침을 먹지 않았다. </label>
+    </p>
+
+    <br>
+
+    <h3>▶ <span class="undl">점심</span>으로 무엇을 드셨나요?🍛</h3>
+    <form action="http://localhost/eunjae.php" method="post">
+        <label> 점심 식사: <input type="text" name="lunch"> </label> <br><br>
+        <input type="submit" value="기록하기"> 🖊
+    </form>
+    <br><br>
+
+    <fieldset>
+        <legend class="saying"><br>오늘의 명언💬<br>today's saying</legend>
+        <h5>❝ 내일은 인생에서 가장 중요한 것이다. 자정이 되면 내일은 매우 깨끗한 상태로<br>
+        우리에게 다가온다. 매우 완벽한 모습으로 우리 곁으로 와 우리 손으로 들어온다.<br>
+        내일은 우리가 어제에서 뭔가를 배웠기를 희망한다. ❞</h5>
+    </fieldset>
+    <br><br>
+
+    <h3>10월 가계부💸</h3>
+    <p>▼ 소비 내역</p>
+    <table border="3">
+        <colgroup>
+            <col>
+            <col style="background-color: rgb(232, 218, 218);">
+            <col>
+            <col width="70px" style="background-color: rgb(232, 218, 218);">
+            <col>
+        </colgroup>
+        <tr style="background-color: rgb(195, 195, 236);">
+            <th>날짜</th>
+            <th>구분</th>
+            <th width="250px">내역</th>
+            <th>금액</th>
+            <th>비고</th>
+        </tr>
+        <tr>
+            <td>10/2</td>
+            <td>교통</td>
+            <td>버스카드충전</td>
+            <td>-40,000</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>10/7</td>
+            <td>식비</td>
+            <td>친구와 라멘 식사</td>
+            <td>-21,000</td>
+            <td>카페값 포함</td>
+        </tr>
+        <tr>
+            <td>10/11</td>
+            <td>기타</td>
+            <td>친구 생일 선물</td>
+            <td>-30,000</td>
+            <td>카카오톡 선물하기</td>
+        </tr>
+        <tr>
+            <td>10/12</td>
+            <td>쇼핑</td>
+            <td>니트 구입</td>
+            <td>-23,600</td>
+            <td>천안 신부동 옷가게</td>
+        </tr>
+        <tr>
+            <td>10/16</td>
+            <td>식비</td>
+            <td>배달음식 주문</td>
+            <td>-14,400</td>
+            <td>룸메언니와 마라탕 주문</td>
+        </tr>
+        <tr>
+            <td>10/19</td>
+            <td>식비</td>
+            <td>편의점</td>
+            <td>-6,900</td>
+            <td>간식 및 커피 구입</td>
+        </tr>
+        <tr>
+            <td>10/22</td>
+            <td>기타</td>
+            <td>약국</td>
+            <td>-12,000</td>
+            <td>연고 구입</td>
+        </tr>
+        <tr>
+            <td>10/25</td>
+            <td>교통</td>
+            <td>시외버스 예매</td>
+            <td>-5,400</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>10/25</td>
+            <td>식비</td>
+            <td>친구와 샤브샤브 식사</td>
+            <td>-15,000</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>10/28</td>
+            <td>기타</td>
+            <td>두루마리 휴지 구입</td>
+            <td>-11,900</td>
+            <td>기숙사용 휴지</td>
+        </tr>
+    </table>
+    <br>
+
+    <h4><span class="big">🖩</span> 남은 식권 계산기 <span class="big">🖩</span></h4>
+    <p>☞ <span class="undl">남은 식권의 개수</span>와 <span class="undl">오늘 사용할 식권의 개수</span>를 차례대로 입력하세요.<br>남을 식권의 양을 계산해드린답니다.🍚</p>
+    <form oninput="result.value=parseInt(num1.value)-parseInt(num2.value)">
+        <input type="number" name="num1" value="0">
+        - <input type="number" name="num2" value="0">
+        = <output name="result"></output>
+    </form>
+    <br>
+
+    <h4>👛 알뜰 살뜰 적립 기록</h4>
+    <p>
+        ■ 지금까지 모은 학교카페 쿠폰 개수🔖: <input type="number" min="0" max="10" value="0"> 개<br>
+        쿠폰 15개 적립시 아메리카노(ice) 가 무료!
+    </p>
+    <br>
+
+    <h4>🩺 나의 마음 진단</h4>
+    <p>
+        ■ 대학생활 만족도😀: <input type="range" min="1" max="5" value="3">
+    </p>
+    <br>
+
+    <div id="container"></div>
+    <form>
+        <p>🍀 ! 대왕 네잎클로버 발견 ! 🍀</p>
+        <button type="submit">
+            <img src="images/네잎클로버.jfif" alt="네잎클로버 이미지" width="456.5" height="399.5"> 🍀행운 만땅🍀
+        </button>
+        <p>🍀 오늘 이 네잎클로버를 누르면, 더 행복해진답니다! 🍀</p>
+    </form>
+    <div id="container"></div>
+    <br>
+    
+
+    <br><br>
+
+    <h4>📨 받은 메일함</h4>
+    <br>
+    <fieldset>
+        <legend><span class="bluetext">(읽음)✓ </span><b>[설문] 방과후 로봇 프로그램 진행 관련</b></legend>
+        <p>방과후에 로봇 프로그램을 진행할 예정입니다. 아래의 정보를 작성 후 답장 부탁드립니다.</p><br>
+        <b>활동 기간 선택</b>
+        <label><input type="date" value="2022-11-04" id="start"></label>
+        <label><input type="date" id="end"></label>
+
+        <P>
+            <b>참여 가능한 시간 대를 선택해주세요.</b><br>
+            <label>시작 시간<input type="time" value="09:00" id="start"></label>
+            <label>종료 시간<input type="time" value="18:00" id="end"></label> 
+        </P>
+
+        <P>
+            <b>조별 모임 예정 날짜를 기입해주세요.</b><br>
+            <label>시작 시간<input type="datetime-local" value="2022-10-01T09:00" id="start"></label>
+            <label>종료 시간<input type="datetime-local" value="18:00" id="end"></label>
+        </P>
+    </fieldset><br>
+    <input type="submit" value="↩답장"> <input type="submit" value="↪전달"> <input type="submit" value="🗑삭제">
+    <br><br><br><br>
+
+    <fieldset>
+        <legend><span class="bluetext">(읽음)✓ </span><b>스 팸 § 메 시 지</h4></b></legend>
+        <p>당신은 애국가 1절을 알고 계십니까?🌺<br>그렇다면 애국가 1절 외우기 start!</p>
+        <textarea cols="80" rows="10" class="purpletext">
+                🌺 애  국  가 🌺  -  1 절
+        
+        0:00 ━━━━●────────── 1:12
+
+        ⇆ㅤㅤㅤㅤㅤ ◁ㅤㅤ❚❚ㅤㅤ▷ ㅤㅤㅤㅤㅤ↻
+
+            동해물과 백두산이 마르고 닳도록
+            하느님이 보우하사 우리나라 만세
+            무궁화 삼천리 화려강산 ♪
+        </textarea>
+    </fieldset><br>
+    <input type="submit" value="↩답장"> <input type="submit" value="↪전달"> <input type="submit" value="🗑삭제">
+</body>
+</html>
